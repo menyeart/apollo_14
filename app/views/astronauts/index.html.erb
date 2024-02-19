@@ -1,0 +1,9 @@
+<h1> All Astronauts </h1>
+<ul>
+<% @astronauts.each do |astronaut| %>
+<li>
+<%= "Name: #{astronaut.name}, Age: #{astronaut.age}, Job: #{astronaut.job}, #{astronaut.name}'s Space Missions: #{astronaut.all_missions_sorted.join(", ")}, #{astronaut.name}'s Total Time in Space: #{astronaut.total_time_in_space} days"%>
+</li>
+<%end%>
+</ul>
+<%="Average Age: #{@astronauts.avg_age}"%>
